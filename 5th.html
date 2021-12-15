@@ -1,0 +1,46 @@
+<html>
+<head>
+
+    <title>5th</title>
+    <link rel="stylesheet" href="5th.css"></link>
+
+</head>
+
+
+<body onload="checkRun();">
+
+    <!-- has unique class so one of the js functions only run for this specific page -->
+    <div class="homePageContentContainer unqiue">
+
+
+
+        <div class="title">
+        <H1><div class="deafult">5th</div></H1>
+        <div class="title tip ">F11 for fullscreen</div>
+        </div>
+
+        <div class="start">
+            <div class="selectable" onclick="fadePageOut(this.parentNode.parentNode,'HowToPlay.html')">How to play</div> <!-- How to play  -->
+
+        </div>
+
+        <div class="gameSelection">
+            <!-- on image click sets save file and fade out -->
+            <div class="loadGame"><img  onclick="sessionStorage.setItem('saveFile',0);fadePageOut(this.parentNode.parentNode ,'Character selection.html')" src="1.jpg"><div class="selectable" onclick="delSave(0)">Restart </div> </div>
+            <div class="loadGame" ><img onclick="sessionStorage.setItem('saveFile',1);fadePageOut(this.parentNode.parentNode,'Character selection.html')" src="2.jpg"><div class="selectable" onclick="delSave(1)">Restart</div></div>
+            <div class="loadGame" ><img onclick="sessionStorage.setItem('saveFile',2);fadePageOut(this.parentNode.parentNode,'Character selection.html')" src="3.jpg"><div class="selectable" onclick="delSave(2)">Restart</div></div>
+            <div class="loadGame" ><img  onclick="sessionStorage.setItem('saveFile',3 );fadePageOut(this.parentNode.parentNode,'Character selection.html')" src="4.jpg"><div class="selectable" onclick="delSave(3)">Restart</div></div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <script src="5th.js"></script>
+
+</body>
+
+</html>
+

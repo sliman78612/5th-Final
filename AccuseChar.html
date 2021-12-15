@@ -1,0 +1,120 @@
+﻿<html>
+<head>
+
+    <title>5th</title>
+    <link rel="stylesheet" href="5th.css"></link>
+
+</head>
+
+<body>
+
+    <div id="ContentContainer">
+
+        <!-- Video loop of all characters standbly -->
+        <video autoplay muted loop class="backgroundVid">
+            <source src="character selection screen\selection - stand by.mp4" type="video/mp4" />
+        </video>
+
+        <div class="title"><H1><div class="deafult">Accuse a character</div></H1></div>
+
+        <!-- svg of overlays -->
+        <svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" class="selectorOverlay" onload="addSelectors();">
+            
+            <defs>
+                <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_2_blur">
+                 <feGaussianBlur stdDeviation="5.6" in="SourceGraphic"/>
+                </filter>
+                <radialGradient gradientTransform="translate(0,0.010015623569488534) scale(1,0.98)" r="0.40996" cy="0.50078" cx="0.5" spreadMethod="pad" id="svg_11">
+                 <stop offset="0" stop-opacity="0.98828" stop-color="#00897e"/>
+                 <stop offset="1" stop-opacity="0.99609" stop-color="#ffffff"/>
+                </radialGradient>
+               </defs>
+
+            <g class = selectorGroup>
+                <g >    
+                    <!-- onclick of the circle overlay, selects specific character and toggles notepad to show the notepad svg -->
+                 <ellipse onclick="selectedChar = JSON.parse(localStorage.getItem('priscillaArray')); toggleNotepad()" class = "selectCircle" fill="url(#svg_11)" cx="350.33348" cy="539.99999" id="svg_3" rx="269.33347" ry="334.00015" stroke-width="17" opacity="0.81" stroke="#0089b7" fill-opacity="0.67" filter="url(#svg_2_blur)"/>
+                 <text opacity="0.88" xml:space="preserve" text-anchor="start" font-family="'Piazzolla'" font-size="58" id="svg_1" y="170.58825" x="243.62845" fill-opacity="0.67" stroke-width="0" stroke="#0089b7" fill="#000000">Priscilla</text>
+                </g>
+            </g>
+
+            <g  class = selectorGroup>
+                 <g >
+                    <!-- onclick of the circle overlay, selects specific character and toggles notepad to show the notepad svg -->
+                    <ellipse onclick="selectedChar = JSON.parse(localStorage.getItem('helenaArray')); toggleNotepad()" class = "selectCircle" filter="url(#svg_2_blur)" fill-opacity="0.67" stroke="#0089b7" opacity="0.81" stroke-width="17" ry="334.00015" rx="269.33347" id="svg_2" cy="539.99999" cx="1635.33354" fill="url(#svg_11)"/>
+                  <text fill="#000000" stroke="#0089b7" stroke-width="0" fill-opacity="0.67" x="1528.62851" y="170.58825" id="svg_4" font-size="58" font-family="'Piazzolla'" text-anchor="start" xml:space="preserve" opacity="0.88">Helena</text>
+                 </g>
+            </g>
+
+            <g  class = selectorGroup>
+                     <g >
+                      <!-- onclick of the circle overlay, selects specific character and toggles notepad to show the notepad svg -->
+                      <ellipse onclick="selectedChar = JSON.parse(localStorage.getItem('jacksonArray')); toggleNotepad()" class = "selectCircle" filter="url(#svg_2_blur)" fill-opacity="0.67" stroke="#0089b7" opacity="0.81" stroke-width="17" ry="334.00015" rx="269.33347" id="svg_2" cy="539.99999" cx="768.33348" fill="url(#svg_11)"/>
+                      <text fill="#000000" stroke="#0089b7" stroke-width="0" fill-opacity="0.67" x="661.62845" y="170.58825" id="svg_4" font-size="58" font-family="'Piazzolla'" text-anchor="start" xml:space="preserve" opacity="0.88">Jackson</text>
+                     </g>
+            </g>
+
+            <g  class = selectorGroup>
+                      <g >
+                       <!-- onclick of the circle overlay, selects specific character and toggles notepad to show the notepad svg -->
+                       <ellipse onclick="selectedChar = JSON.parse(localStorage.getItem('medhiniArray')); toggleNotepad()" class = "selectCircle" filter="url(#svg_2_blur)" fill-opacity="0.67" stroke="#0089b7" opacity="0.81" stroke-width="17" ry="334.00015" rx="269.33347" id="svg_2" cy="539.99999" cx="1256.33354" fill="url(#svg_11)"/>
+                      </g>
+                      <text fill="#000000" stroke="#0089b7" stroke-width="0" fill-opacity="0.67" x="1146.45176" y="170.58825" id="svg_4" font-size="58" font-family="'Piazzolla'" text-anchor="start" xml:space="preserve" opacity="0.88">Medhini</text>
+            </g>
+                    
+               
+
+        </svg>
+
+        <!-- Notepad div is hidden until its toggled -->
+        <div id="Notepad" style="display: none;">
+            <!-- invisible svg so user cannot click on background whilst notepad is being viewed, stops saving notes to the wrong character -->
+            <svg height=100% viewBox="0 0 1920 1080" >
+                <rect class="blockBehind" fill-opacity="0" height="1080" width="1920" y="0" />
+            </svg>
+            <svg class="blockBehind" height=100% viewBox="0 0 1000 1080" style="left: 25%;">
+
+                
+                <g id="Layer_1">
+                    <title>Layer 1</title>
+                    <rect id="svg_14" height="821.17838" width="542.3542" y="135.29569" x="229.41343" stroke="#000" fill="white" />
+                    <ellipse stroke="#000" ry="40.74285" rx="22.14285" id="svg_2" cy="136.45714" cx="317.85714" fill="none" />
+                    <ellipse stroke="#000" ry="40.74285" rx="22.14285" id="svg_3" cy="137.88571" cx="410.71429" fill="none" />
+                    <ellipse stroke="#000" ry="40.74285" rx="22.14285" id="svg_4" cy="137.88571" cx="502.14286" fill="none" />
+                    <ellipse stroke="#000" ry="40.74285" rx="22.14285" id="svg_5" cy="137.88571" cx="587.85715" fill="none" />
+                    <ellipse stroke="#000" ry="40.74285" rx="22.14285" id="svg_6" cy="137.88571" cx="675.00001" fill="none" />
+                    <line y2="360" x2="725.71429" y1="355.71429" x1="284.28571" stroke="#000" fill="none" />
+
+                    <!-- Character name user variable -->
+                    <text xml:space="preserve" id="charName"  text-anchor="start" font-family="Noto Sans JP" font-size="39" stroke-width="0" y="341.17852" x="288.2371" stroke="#000" fill="#000000">Characters name</text>
+
+                    <!-- use textarea and stuff in a form tag for feedback -->
+
+                    <foreignObject x="300" y="400" width="400" height="500">
+                        <textarea id="takenNotes">Typeable text area test</textarea>
+                    </foreignObject>
+                    <g onClick="accuseChar(selectedChar[0].name,event);" class = "selectable" > 
+                    <rect class = "selectable" height="41.33339" width="200" y="237.33444" x="282.66846" stroke="#000" fill="white"/>
+                    <text xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="24" stroke-width="0" id="svg_13" y="266.66782" x="348.00189" stroke="#000" fill="#000000">Guilty</text>
+                   </g>
+                    <g onClick="toggleNotepad();" class = "selectable" > <rect height="41.33339" width="200" y="237.33444" x="526.66882" stroke="#000" fill="white"/>
+                        <text xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="24" stroke-width="0" id="svg_15" y="266.66781" x="573.33556" stroke="#000" fill="#000000">Not Guilty</text>
+                    </g>
+
+                </g>
+
+
+            </svg>
+
+        </div>
+
+        <img src="backButton.png" id="backButton" onclick="fadePageOut(this.parentNode.parentNode,'5th.html')">
+
+
+    </div>
+
+    <script src="5th.js"></script>
+
+</body>
+
+</html>

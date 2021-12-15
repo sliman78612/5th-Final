@@ -1,0 +1,121 @@
+<html>
+<head>
+
+    <title>5th</title>
+    <link rel="stylesheet" href="5th.css"></link>
+
+</head>
+
+<body onload="loadVid()">
+
+    <!-- loads all infromation page needs on load  -->
+
+
+    <div id="ContentContainer" >
+
+
+
+        <!--Video tag for standby-->
+        <video muted autoplay loop width="100%" id="standbyLoop"  type="video/mp4">
+        </video>
+
+
+
+
+
+        <!--Video tag for asking question-->
+        <!--  on play removes back button, on end reveals back button and removes video passing in this tag-->
+        <video width="100%" id="questionBox" type="video/mp4" onended='document.getElementById("backButton").style.display="block";removeVideo(this)' onplay='removeBack(this);'>
+        </video>
+
+
+        <img src="Notebook Icon.png" id="notepadIcon" onclick="toggleNotepad();">
+
+
+
+        <div  id="Notepad" style="display: none; left: 25%;" >
+
+                <svg height=100% viewBox="0 0 1000 1080" >
+
+                
+                <g id="Layer_1">
+                    <title>Layer 1</title>
+                    <rect id="svg_14" height="821.17838" width="542.3542" y="135.29569" x="229.41343" stroke="#000" fill="white" />
+                    <ellipse stroke="#000" ry="40.74285" rx="22.14285" id="svg_2" cy="136.45714" cx="317.85714" fill="none" />
+                    <ellipse stroke="#000" ry="40.74285" rx="22.14285" id="svg_3" cy="137.88571" cx="410.71429" fill="none" />
+                    <ellipse stroke="#000" ry="40.74285" rx="22.14285" id="svg_4" cy="137.88571" cx="502.14286" fill="none" />
+                    <ellipse stroke="#000" ry="40.74285" rx="22.14285" id="svg_5" cy="137.88571" cx="587.85715" fill="none" />
+                    <ellipse stroke="#000" ry="40.74285" rx="22.14285" id="svg_6" cy="137.88571" cx="675.00001" fill="none" />
+                    <line y2="360" x2="725.71429" y1="355.71429" x1="284.28571" stroke="#000" fill="none" />
+
+                    <!-- Character name user variable -->
+                    <text xml:space="preserve" id="charName"  text-anchor="start" font-family="Noto Sans JP" font-size="39" stroke-width="0" y="341.17852" x="288.2371" stroke="#000" fill="#000000">Characters name</text>
+
+                    <!-- use textarea and stuff in a form tag for feedback -->
+
+
+                    <foreignObject x="300" y="400" width="400" height="500">
+                        <textarea id="takenNotes">Typeable text area test</textarea>
+                    </foreignObject>
+
+                </g>
+
+
+            </svg>
+        </div>
+
+        <div id="questionOverlay">
+
+            <svg viewBox="0 0 1920 330"  xmlns="http://www.w3.org/2000/svg">
+        <g id="Layer_1">
+         <title>Layer 1</title>
+         <line fill="none" stroke="#0089b7" stroke-width="8" fill-opacity="0.67" x1="1030.08589" y1="166.62291" x2="1030.08589" y2="112.07747" />
+         <line fill="none" stroke="#0089b7" stroke-width="8" fill-opacity="0.67" x1="1884.63109" y1="115.10777" x2="1027.05561" y2="112.07747" />
+         <line fill="none" stroke="#0089b7" stroke-width="8" fill-opacity="0.67" x1="887.66169" y1="309.04711" x2="887.66169" y2="254.50167"/>
+         <line fill="none" stroke="#0089b7" stroke-width="8" fill-opacity="0.67" x1="890.692" y1="306.0168" x2="33.11652" y2="302.9865" />
+         <line fill="none" stroke="#0089b7" stroke-width="8" fill-opacity="0.67" x1="1036.14649" y1="293.8956" x2="1036.14649" y2="239.35016" />
+         <line fill="none" stroke="#0089b7" stroke-width="8" fill-opacity="0.67" x1="1893.72197" y1="293.8956" x2="1036.14649" y2="290.86529" />
+         <text class="selectable"  id="q2Box" onclick="askQuestion(2)" fill="#000000" stroke="#0089b7" stroke-width="0" fill-opacity="0.67" x="1042.29631" y="91.04361" font-size="45" font-family="'Piazzolla'" text-anchor="start" xml:space="preserve"></text>
+         <text class="selectable" id="q3Box" onclick="askQuestion(3)" fill="#000000" stroke="#0089b7" stroke-width="0" fill-opacity="0.67" x="1042.29631" y="267.51415"  font-size="45" font-family="'Piazzolla'" text-anchor="start" xml:space="preserve"></text>
+         <text  class="selectable" id="q4Box" onclick="askQuestion(4)" fill="#000000" stroke="#0089b7" stroke-width="0" fill-opacity="0.67" x="865" y="285.1612"  font-size="45" font-family="'Piazzolla'" text-anchor="start" xml:space="preserve"  style="direction: rtl" ></text>
+         <g >
+          <ellipse fill="url(#svg_1)" stroke="#0089b7" stroke-width="8" fill-opacity="0.67" cx="958.57139" cy="210.56229" id="svg_2" rx="83.33331" ry="80.303"/>
+          <line fill="none" stroke="#0089b7" stroke-width="8" fill-opacity="0.67" x1="884.63139" y1="166.62291" x2="884.63139" y2="112.07747" />
+          <line fill="none" stroke="#0089b7" stroke-width="8" fill-opacity="0.67" x1="884.63139" y1="115.10777" x2="27.05592" y2="112.07747" />
+          <text class="selectable" id="q1Box" onclick="askQuestion(1)" fill="#000000" stroke="#0089b7" stroke-width="0" fill-opacity="0.67" x="865" y="96.92596" font-size="45" font-family="'Piazzolla'" text-anchor="start" xml:space="preserve"  style="direction: rtl" ></text>
+         </g>
+        </g>
+        <defs>
+         <radialGradient id="svg_1" spreadMethod="pad" cx="0.5" cy="0.50078" r="0.40996" gradientTransform="translate(0,0.010015623569488534) scale(1,0.98)">
+          <stop stop-color="#00897e" stop-opacity="0.98828" offset="0"/>
+          <stop stop-color="#ffffff" stop-opacity="0.99609" offset="1"/>
+         </radialGradient>
+        </defs>
+       </svg>
+
+        </div>
+
+        <img src="backButton.png" id="backButton" onclick="fadePageOut(this.parentNode.parentNode,'Character selection.html')">
+
+
+
+    </div>
+
+
+
+    <script src="5th.js"></script>
+</body>
+
+</html>
+
+<!--
+    To do
+    overlay on svg,
+    hitboxes - just use id and onclick
+    play interview videos - change ccs variable to make it look blocked
+    Subtitles
+
+
+
+
+-->

@@ -1,0 +1,80 @@
+<html>
+    <head>
+
+        <title>5th</title>
+        <link rel="stylesheet" href="5th.css"></link>
+
+    </head>
+
+<!-- on load checks questions asked to see if limit has been reached -->
+    <body onload="checkQs();">  
+
+
+        <div id="ContentContainer">
+
+
+
+            <video autoplay muted loop  class="backgroundVid">
+                <source src="character selection screen\selection - stand by.mp4" type="video/mp4" />
+            </video>
+
+            <svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" class="selectorOverlay" onload="addSelectors();">
+
+                <defs>
+                    <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_2_blur">
+                     <feGaussianBlur stdDeviation="5.6" in="SourceGraphic"/>
+                    </filter>
+                    <radialGradient gradientTransform="translate(0,0.010015623569488534) scale(1,0.98)" r="0.40996" cy="0.50078" cx="0.5" spreadMethod="pad" id="svg_11">
+                     <stop offset="0" stop-opacity="0.98828" stop-color="#00897e"/>
+                     <stop offset="1" stop-opacity="0.99609" stop-color="#ffffff"/>
+                    </radialGradient>
+                   </defs>
+
+                <g class = selectorGroup>
+                    <g >
+                     <ellipse onclick="selectChar(1)" class = "selectCircle" fill="url(#svg_11)" cx="350.33348" cy="539.99999" id="svg_3" rx="269.33347" ry="334.00015" stroke-width="17" opacity="0.81" stroke="#0089b7" fill-opacity="0.67" filter="url(#svg_2_blur)"/>
+                     <text opacity="0.88" xml:space="preserve" text-anchor="start" font-family="'Piazzolla'" font-size="58" id="svg_1" y="170.58825" x="243.62845" fill-opacity="0.67" stroke-width="0" stroke="#0089b7" fill="#000000">Priscilla</text>
+                    </g>
+                </g>
+
+                <g  class = selectorGroup>
+                     <g >
+                      <ellipse onclick="selectChar(4)" class = "selectCircle" filter="url(#svg_2_blur)" fill-opacity="0.67" stroke="#0089b7" opacity="0.81" stroke-width="17" ry="334.00015" rx="269.33347" id="svg_2" cy="539.99999" cx="1635.33354" fill="url(#svg_11)"/>
+                      <text fill="#000000" stroke="#0089b7" stroke-width="0" fill-opacity="0.67" x="1528.62851" y="170.58825" id="svg_4" font-size="58" font-family="'Piazzolla'" text-anchor="start" xml:space="preserve" opacity="0.88">Helena</text>
+                     </g>
+                </g>
+
+                <g  class = selectorGroup>
+                         <g >
+                          <ellipse onclick="selectChar(2)" class = "selectCircle" filter="url(#svg_2_blur)" fill-opacity="0.67" stroke="#0089b7" opacity="0.81" stroke-width="17" ry="334.00015" rx="269.33347" id="svg_2" cy="539.99999" cx="768.33348" fill="url(#svg_11)"/>
+                          <text fill="#000000" stroke="#0089b7" stroke-width="0" fill-opacity="0.67" x="661.62845" y="170.58825" id="svg_4" font-size="58" font-family="'Piazzolla'" text-anchor="start" xml:space="preserve" opacity="0.88">Jackson</text>
+                         </g>
+                </g>
+
+                <g  class = selectorGroup>
+                          <g >
+                           <ellipse  onclick="selectChar(3)" class = "selectCircle" filter="url(#svg_2_blur)" fill-opacity="0.67" stroke="#0089b7" opacity="0.81" stroke-width="17" ry="334.00015" rx="269.33347" id="svg_2" cy="539.99999" cx="1256.33354" fill="url(#svg_11)"/>
+                          </g>
+                          <text fill="#000000" stroke="#0089b7" stroke-width="0" fill-opacity="0.67" x="1146.45176" y="170.58825" id="svg_4" font-size="58" font-family="'Piazzolla'" text-anchor="start" xml:space="preserve" opacity="0.88">Medhini</text>
+                </g>
+                        
+                   
+
+            </svg>
+
+
+            <!-- <img src="Notebook Icon.png" id="notepadIcon" onclick="toggleNotepad();"> -->
+            <img src="backButton.png" id="backButton" onclick="fadePageOut(this.parentNode.parentNode,'5th.html')">
+
+
+           
+   
+
+
+        </div>
+
+        <script src="5th.js"></script>
+
+    </body>
+
+</html>
